@@ -1,0 +1,380 @@
+body {
+    margin: 40px 0;    
+    background-color: #222222;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-family: Arial;
+}
+
+/* EMPIEZA MENU */
+
+@media (min-width: 768px) {
+    .navbar-nav > li {
+        float: none;
+        display: inline-block;
+    }
+    
+    .navbar-default {
+        background: none;
+        border: none;
+    }
+    
+    .navbar-nav {
+        float: none !important;
+        text-align: center;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .navbar:after {
+        margin:none;
+        content: " ";
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        height: 7px;
+        background: #222 !important;
+        width: 90%;
+        
+    }
+
+    a.brand {
+        transition: color 1s ease, text-shadow 0.3s ease;
+        background-color: #222 !important;
+        color: #ffffff !important;
+    }
+    
+    .navbar-nav > li > a {
+        font-style: italic;
+        display: inline-block;
+        box-sizing: border-box;
+        margin: none;
+        transition: background 0.1s ease 0.05s, box-shadow 0.1s ease;
+        box-shadow: 8px 0 25px rgba(0, 0, 0, 0.3);
+        color: #444;
+        background: #d9d9d9;
+        padding: 15px 45px;
+    }
+    
+    .navbar-nav > li > a:hover,
+    .navbar-nav > li > a:focus {
+        background-image: linear-gradient(to top, #828282 0%, #7d7d7d 19%, #969696 100%);
+        box-shadow: 8px 0 25px 2px rgba(0, 0, 0, 0.3);
+        background-color: #969696;
+        color: white;    
+    }
+    
+}
+
+.page-container {
+    background: #eee;  
+    padding-top: 25px;
+    min-height: 380px;
+    box-shadow: 6px 6px 0px #9C9698, 12px 12px 0px #6B6768;
+}
+
+/* ACABA MENU */
+
+/* EMPIEZA CUERPO */
+
+.btn {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.casaarriba {
+  right: 2%;
+  bottom: 8%;
+  position:fixed;
+  height:10%;
+  width: 5%;
+}
+
+.logofooter{
+    width:95%;
+}
+
+
+.cuerpo{
+    padding:3%;
+}
+
+.oculto{
+    display:none;
+}
+.visible{
+}
+
+#logo {
+    width:100%;
+    height: 520px;
+    margin-top: 2%;
+}
+
+.imagenestutorial {
+    width:90%;
+    border-radius:20px;
+    border:4px solid #5882FA;
+}
+
+
+
+
+
+/* ACABA CUERPO */
+
+
+/* EMPIEZA PIE */
+
+.full {
+    width: 100%;    
+}
+
+.footer h3 {
+    border-bottom: 1px solid #BAC1C8;
+    color: #54697E;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    padding: 40px 0 10px;
+    text-transform: uppercase;
+}
+
+.bloquefooter{
+    display:inline-block;
+    width:20%;
+    padding-left: 4%;
+    padding-bottom:2%;
+}
+
+.footer ul {
+    font-size: 13px;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 15px;
+    color: #7F8C8D;
+}
+.footer ul li a {
+    padding: 0 0 5px 0;
+    display: block;
+}
+.footer a {
+    color: #78828D
+}
+.supportLi h4 {
+    font-size: 20px;
+    font-weight: lighter;
+    line-height: normal;
+    margin-bottom: 0 !important;
+    padding-bottom: 0;
+}
+footer{
+   background-color: #424558;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
+    text-align: center;
+    color: #CCC;
+}
+
+footer p {
+    padding: 10.5px;
+    margin: 0px;
+    line-height: 100%;
+}
+
+.imagenslider {
+    width:450px;
+    height:450px;
+}
+
+
+.slider {
+    width: 95%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    
+    animation: cambio 20s infinite alternate linear;
+}
+
+.slider li {
+    width: 100%;
+    list-style: none;
+}
+
+
+
+@keyframes cambio {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+    
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+    
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+    
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+
+
+
+
+.contact_form h2 {
+    background: none repeat scroll 0 0 #F3F3F3;
+    border-radius: 5px;
+    color: #6495ED;
+    display: block;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 5px;
+    text-shadow: 1px 1px 1px #CCCCCC;
+    width: auto;
+}
+
+.contact_form h3 {
+    border-radius: 5px;
+    display: block;
+    font-family: sans-serif;
+    color:#0000CD;
+    font-size: 12px;
+    padding: 5px;
+    text-shadow: 1px 1px 1px ;
+    width: auto;
+}
+
+/*--- estilos para los ul y li del formulario ---*/
+.contact_form ul {
+    width: 580px;
+    list-style-type:none;
+    margin:0px;
+    padding:0px;
+}
+.contact_form li{
+    padding:12px;
+    border-bottom:1px solid #eee;
+    position:relative;
+}
+
+.contact_form label {
+    color: #555555;
+    display: inline-block;
+    float: left;
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 3px;
+    padding: 3px;
+    width: 90px;
+}
+
+.contact_form input {
+    height:20px;
+    width:220px;
+    padding:5px 8px;
+}
+.contact_form textarea {
+    padding:8px;
+    width:300px;
+}
+.contact_form button {
+    margin-left:90px;
+}
+
+/*----- estilos visuales de los elementos --------*/
+.contact_form input, .contact_form textarea {
+    border:1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius:5px;
+    color: #888;
+    font-size: 12px;
+    padding-right:30px;
+    -moz-transition: padding .25s;
+    -webkit-transition: padding .25s;
+    -o-transition: padding .25s;
+    transition: padding .25s;
+}
+.contact_form input:focus, .contact_form textarea:focus {
+    background: #fff;
+    border:1px solid #555;
+    box-shadow: 0 0 3px #aaa;
+    padding-right:80px;
+}
+
+/* === Estilos de Validacion === */
+ 
+.contact_form input:required:valid, .contact_form textarea:required:valid {
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+.contact_form input:focus:invalid, .contact_form textarea:focus:invalid {
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535
+}
+
+/* === Estilos del boton de Envio === */
+button.submit {
+    padding: 9px 17px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1;
+    color: #444;
+    border: none;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.85);
+   
+    background: rgba(24,115,201,1);
+    background: -moz-linear-gradient(left, rgba(24,115,201,1) 0%, rgba(24,115,201,1) 44%, rgba(24,115,201,1) 56%, rgba(20,89,169,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(24,115,201,1)), color-stop(44%, rgba(24,115,201,1)), color-stop(56%, rgba(24,115,201,1)), color-stop(100%, rgba(20,89,169,1)));
+    background: -webkit-linear-gradient(left, rgba(24,115,201,1) 0%, rgba(24,115,201,1) 44%, rgba(24,115,201,1) 56%, rgba(20,89,169,1) 100%);
+    background: -o-linear-gradient(left, rgba(24,115,201,1) 0%, rgba(24,115,201,1) 44%, rgba(24,115,201,1) 56%, rgba(20,89,169,1) 100%);
+    background: -ms-linear-gradient(left, rgba(24,115,201,1) 0%, rgba(24,115,201,1) 44%, rgba(24,115,201,1) 56%, rgba(20,89,169,1) 100%);
+    background: linear-gradient(to right, rgba(24,115,201,1) 0%, rgba(24,115,201,1) 44%, rgba(24,115,201,1) 56%, rgba(20,89,169,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1873c9', endColorstr='#1459a9', GradientType=1 );
+
+   border: 1px solid #f1f1f1;
+   border-radius: 10px;
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+button.submit:hover {
+    opacity:.55;
+    cursor: pointer;
+    background: rgba(24,115,201,1);
+    background: -moz-linear-gradient(left, rgba(24,115,201,1) 0%, rgba(24,115,201,1) 44%, rgba(24,115,201,1) 56%, rgba(20,89,169,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(24,115,201,1)), color-stop(44%, rgba(24,115,201,1)), color-stop(56%, rgba(24,115,201,1)), color-stop(100%, rgba(20,89,169,1)));
+    background: -webkit-linear-gradient(left, rgba(24,115,201,1) 0%, rgba(24,115,201,1) 44%, rgba(24,115,201,1) 56%, rgba(20,89,169,1) 100%);
+    background: -o-linear-gradient(left, rgba(24,115,201,1) 0%, rgba(24,115,201,1) 44%, rgba(24,115,201,1) 56%, rgba(20,89,169,1) 100%);
+    background: -ms-linear-gradient(left, rgba(24,115,201,1) 0%, rgba(24,115,201,1) 44%, rgba(24,115,201,1) 56%, rgba(20,89,169,1) 100%);
+    background: linear-gradient(to right, rgba(24,115,201,1) 0%, rgba(24,115,201,1) 44%, rgba(24,115,201,1) 56%, rgba(20,89,169,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1873c9', endColorstr='#1459a9', GradientType=1 );
+color:black;
+}
+
+button.submit:active {
+    border: 1px solid #222;
+    box-shadow: 0 0 10px 5px #444 inset;
+}
+
+
+/* ACABA PIE */

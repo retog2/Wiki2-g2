@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/css.css">
+  </head>
+<body>
+<a href="#arriba"><img class="casaarriba" src="imagenes/casa.png" alt=""></a>
+<p><a name="arriba"></a></p>
+  <div class="page-container">
+    <!-- EMPIEZA EL MENU -->
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a class="brand" href="mysql.html">PHP-MySQL</a></li>
+          <li><a href="wordpress.html">WordPress</a></li>
+          <li><a href="owncloud.html">OwnCloud</a></li>
+          <li><a href="prestashop.html">PrestaShop</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  <!-- ACABA EL MENU -->
+  
+  <!-- //////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- EMPIEZA EL CUERPO -->
+  <div class="cuerpo">
+    <!-- BOTONES PARA MOSTRAR EL CONTENIDO DEL TEMA -->
+
+  <center>
+      <div>
+        <button style="background-color:#ef9115" onclick="ocultarQueEs()" class="btn">¿Qué es?</button>
+        <button style="background-color:#ef9115" onclick="ocultarParaQueSirve()" class="btn">¿Para qué sirve?</button>
+        <button style="background-color:#ef9115" onclick="ocultarInstalacion()" class="btn">Instalación</button>
+        <a class="cover"><button style="background-color:#ef9115" onclick="ocultarProblemas()" class="btn">Problemas que hemos tenido</button></a>
+        <button style="background-color:#ef9115" onclick="EnseñarTodo()" class="btn">Mostrar tutorial completo</button>
+      </div>
+  </center>
+
+
+
+
+    <img id="logo"  class="logo" src="imagenes/php-mysql/logo.png">
+
+
+    <!-- ¿QUÉ ES? -->
+    <div  id="QueEs" class="oculto">  
+    <h2>¿QUÉ ES?</h2>
+    <p>MySQL es un sistema de gestión de bases de datos relacional y una de las más populares en general junto a Oracle y Microsoft SQL Server, sobre todo para entornos de desarrollo web.</p>
+    </div>
+
+    
+    <div id="ParaQueSirve" class="oculto">
+    <!-- ¿PARA QUÉ SIRVE? -->
+      <h2>¿PARA QUÉ SIRVE?</h2>
+      <p>MySQL es muy utilizado en aplicaciones web, como Joomla, Wordpress, Drupal o phpBB, en plataformas (Linux/Windows-Apache-MySQL-PHP/Perl/Python), y por herramientas de seguimiento de errores como Bugzilla. Su popularidad como aplicación web está muy ligada a PHP, que a menudo aparece en combinación con MySQL. En aplicaciones web hay baja concurrencia en la modificación de datos y en cambio el entorno es intensivo en lectura de datos, lo que hace a MySQL ideal para este tipo de aplicaciones.
+      </p>
+    </div>
+    
+    <!-- INSTALACIÓN -->
+    <div  id="Instalación" class="oculto">
+      <h2>INSTALACIÓN</h2>
+
+      <p>Lo primero que haremos será instalar el MySQL con el siguiente comando: “apt-get install mysql-server-5.7”, una vez introducimos este comando, nos pedirá una contraseña para el root user de este.</p>
+      <img class="imagenestutorial" src="imagenes/php-mysql/1.png" alt="" /><br>
+
+      <p>Ahora simplemente dejamos que se instale.</p>
+      <img class="imagenestutorial" src="imagenes/php-mysql/2.png" alt="" /><br>
+
+      <p>Una vez haya acabado, se nos quedará algo asi:</p>
+      <img class="imagenestutorial" src="imagenes/php-mysql/3.png" alt="" /><br>
+
+      <p>Ahora introducimos el siguiente comando: “apt-get install mysql-server mysql-client”. Y nos debería hacer algo similar a la imagen de debajo:</p>
+      <img class="imagenestutorial" src="imagenes/php-mysql/4.png" alt="" /><br>
+
+      <h2>CONFIGURACIÓN</h2>
+
+      <p>Ahora entraremos en la consola de nuestro servidor MySQL con el siguiente comando: “mysql -p”</p>
+      <img class="imagenestutorial" src="imagenes/php-mysql/5.png" alt="" /><br>
+
+      <p>Ahora procederemos a crear un usuario admin en MySQL con los siguientes comandos:</p>
+        <ol>
+          <li>Primero crearemos el usuario: “CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin';”</li>
+          <li>Ahora le daremos privilegios a este usuario: “GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' ;”</li>
+          <li>Ahora crearemos otro usuario: “CREATE USER 'admin'@'%' IDENTIFIED BY 'admin';”</li>
+          <li>Y a este le daremos también todos los privilegios: “GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%';”</li>
+        </ol>
+      <img class="imagenestutorial" src="imagenes/php-mysql/6.png" alt="" /><br>
+
+      <p>Ahora crearemos la base de datos: “CREATE DATABASE wiki2g2 CHARACTER SET utf8 COLLATE utf8_general_ci;”. Después de esto le daremos privilegios a la base de datos: “GRANT ALL PRIVILEGES ON wiki2g2.* To 'web'@'localhost' IDENTIFIED BY 'admin';” y “GRANT ALL PRIVILEGES ON wiki2g2.* To 'web'@'%' IDENTIFIED BY 'admin’;”</p><br>
+
+      <p>Una vez acabemos editaremos un archivo. Para ello tendremos que dar “CTRL+Z” para volver a la consola normal. Para editar el archivo escribiremos “nano /etc/mysql/my.cnf”. Una vez ahí dentro añadiremos la siguiente línea comentada: “#bind-address = 127.0.0.1”</p>
+      <img class="imagenestutorial" src="imagenes/php-mysql/7.png" alt="" /><br>ç
+
+      <p>Ahora reiniciaremos el servicio MySql con el comando “/etc/init.d/mysql reload”.</p>
+      <img class="imagenestutorial" src="imagenes/php-mysql/8.png" alt="" /><br>
+
+      <p>A continuación, instalaremos PHPMyAdmin con el siguiente comando: “apt-get install phpmyadmin”.</p>
+      <img class="imagenestutorial" src="imagenes/php-mysql/9.png" alt="" /><br>
+      
+      <p>Y ya tendremos instalado el MySql en nuestro servidor Linux.</p>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- PROBLEMAS -->
+    <div  id="Problemas" class="oculto">
+      <h2>PROBLEMAS</h2>
+      <p>En nuestro caso, no hemos tenido ningún problema a resaltar. Los pasos necesarios a hacer los hemos conseguir hacer a la primera sin ningún problema.</code>
+    </div>
+
+
+
+  </div>
+  
+
+  <script>
+    function ocultarQueEs(){
+      var y = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var x = document.getElementById("QueEs");
+
+      if (x.className==="oculto"){
+        x.className="visible";
+        z.className="oculto";
+        t.className="oculto";
+        y.className="oculto";
+      }
+      else {
+        x.className="oculto";
+        z.className="visible";
+      }
+    }
+
+    function ocultarParaQueSirve(){
+      var y = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var x = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+
+      if (t.className==="oculto"){
+        x.className="oculto";
+        z.className="oculto";
+        t.className="visible";
+        y.className="oculto";
+        u.className="oculto";
+      }
+      else {
+        t.className="oculto";
+        z.className="visible";
+      }
+    }
+
+    function ocultarInstalacion(){
+      var y = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var x = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+
+      if (y.className==="oculto"){
+        x.className="oculto";
+        z.className="oculto";
+        t.className="oculto";
+        y.className="visible";
+        u.className="oculto";
+      }
+      else {
+        y.className="oculto";
+        z.className="visible";
+      }
+    }
+
+    function ocultarProblemas(){
+      var y = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var x = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+
+      if (u.className==="oculto"){
+        x.className="oculto";
+        z.className="oculto";
+        t.className="oculto";
+        y.className="oculto";
+        u.className="visible";
+      }
+      else {
+        u.className="oculto";
+        z.className="visible";
+      }
+    }
+
+    function EnseñarTodo(){
+      var x = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var y = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+      if (u.className==="oculto"){
+      x.className="visible";
+      z.className="visible";
+      t.className="visible";
+      y.className="visible";
+      u.className="visible";
+      }
+      else{
+        x.className="oculto";
+        z.className="visible";
+        t.className="oculto";
+        y.className="oculto";
+        u.className="oculto";
+      }
+    } 
+  </script>
+  <!-- ACABA EL CUERPO -->
+
+</div>
+    <div class="footer" id="footer">
+            <div class="row">
+                <div class="bloquefooter">
+                    <h3>PHP-MySQL</h3>
+                    <a href="mysql.html"><img class="logofooter" src="imagenes/logomysql.svg"></a>
+                </div>
+                <div class="bloquefooter">
+                    <h3>WordPress</h3>
+                    <a href="wordpress.html"><img class="logofooter" src="imagenes/logowordpress.png"></a>
+                </div>
+                <div class="bloquefooter">
+                    <h3>OwnCloud</h3>
+                    <a href="owncloud.html"><img class="logofooter" src="imagenes/logoowncloud.png"></a>
+                </div>
+                <div class="bloquefooter">
+                    <h3>PrestaShop</h3>
+                    <a href="prestashop.html"><img class="logofooter" src="imagenes/logoprestashop.svg
+                    "></a>
+                </div>
+                
+            </div>
+            <!--/.row--> 
+        </div>
+        <!--/.container--> 
+    </div>
+    <!--/.footer-->
+
+<footer>  
+    <p>© 2017<a style="color:#0a93a6; text-decoration:none;" href="index.html"> G2</a>, todos los derechos reservados hasta que acabemos el curso 2017-2018.</p>
+    
+</footer>
+</body>
+</html>

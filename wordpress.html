@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/css.css">
+  </head>
+<body>
+<a href="#arriba"><img class="casaarriba" src="imagenes/casa.png" alt=""></a>
+<p><a name="arriba"></a></p>
+  <div class="page-container">
+    <!-- EMPIEZA EL MENU -->
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="mysql.html">PHP-MySQL</a></li>
+          <li><a class="brand" href="wordpress.html">WordPress</a></li>
+          <li><a href="owncloud.html">OwnCloud</a></li>
+          <li><a href="prestashop.html">PrestaShop</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  <!-- ACABA EL MENU -->
+  
+  <!-- //////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- EMPIEZA EL CUERPO -->
+  <div class="cuerpo">
+    <!-- BOTONES PARA MOSTRAR EL CONTENIDO DEL TEMA -->
+
+  <center>
+      <div>
+        <button style="background-color:#2294f7" onclick="ocultarQueEs()" class="btn">¿Qué es?</button>
+        <button style="background-color:#2294f7" onclick="ocultarParaQueSirve()" class="btn">¿Para qué sirve?</button>
+        <button style="background-color:#2294f7" onclick="ocultarInstalacion()" class="btn">Instalación</button><br><button style="background-color:#2294f7" onclick="ocultarProblemas()" class="btn">Problemas que hemos tenido</button>
+        <button style="background-color:#2294f7" onclick="ocultarUso()" class="btn">¿Cómo se usa?</button>
+        <button style="background-color:#2294f7" onclick="EnseñarTodo()" class="btn">Mostrar tutorial completo</button>
+      </div>
+  </center>
+
+
+
+
+    <img id="logo"  class="logo" src="imagenes/Wordpress/logo.png">
+
+
+    <!-- ¿QUÉ ES? -->
+    <div  id="QueEs" class="oculto">
+    <h2>¿QUÉ ES?</h2>
+    <p>Es un sistema de gestión de contenidos (CSM) que permite crear y mantener un blog u otro tipo de web. Es un sistema ideal para un sitio web que se actualiza periodicamente. Si se escribe contenido con cierta frecuencia, cuando alguien accede al sitio web, puede encontrar todos esos contenidos ordenados cronologicamente.</p>
+    </div>
+
+    
+    <div id="ParaQueSirve" class="oculto">
+    <!-- ¿PARA QUÉ SIRVE? -->
+    <h2>¿PARA QUÉ SIRVE?</h2>
+    <ol>
+      <li>BLOG</li>
+      <li>WEBS EMPRESARIALES</li>
+      <li>TIENDAS ONLINE</li>
+      <li>PERIÓDICO DIGITAL</li>
+      <li>CENTRAL DE RESERVAS</li>
+    </ol>
+    </div>
+    
+    <!-- INSTALACIÓN -->
+    <div  id="Instalación" class="oculto">
+      <h2>INSTALACIÓN</h2>
+
+      <p>Entraremos en modo MySQL mediante el comando <code>mysql -u root -p</code> y ahora introduciremos el comando <code>CREATE DATABASE wordpress</code>. Después comprobaremos que se haya creado correctamente con el comando <code>SHOW DATABASES</code>.</p>
+      <img class="imagenestutorial" src="imagenes/Wordpress/1.png" alt="" /><br>
+
+      <p>Ahora crearemos un usuario para la base de datos con el comando <code>CREATE USER adminwordpress@localhost IDENTIFIED BY ‘admin’</code>.</p>
+      <img class="imagenestutorial" src="imagenes/Wordpress/2.png" alt="" /><br>
+
+      <p>Ahora le daremos privilegios al usuario creado anteriormente en la base de datos con el comando <code>GRANT ALL PRIVILEGES ON wordpress.* TO adminwordpress@localhost;</code></p>
+      <img class="imagenestutorial" src="imagenes/Wordpress/3.png" alt="" /><br>
+
+      <p>Ahora descargaremos el paquete de Wordpress en castellano mediante el comando <code>wget https://es.wordpress.org/wordpress-4.8.2-es_ES.tar.gz</code>.</p>
+      <img class="imagenestutorial" src="imagenes/Wordpress/4.png" alt="" /><br>
+
+      <p>Ahora introducimos el comando <code>tar xzvf wordpress-4.8.2-es_ES.tar.gz</code> y esperamos a que acabe.</p>
+      <img class="imagenestutorial" src="imagenes/Wordpress/5.png" alt="" /><br>
+
+      <p>Ahora actualizaremos los repositorios con el comando <code>sudo apt-get update</code> y despues descargaremos los paquetes con los comando <code>apt-get install php7.0-gd</code> y <code>sudo apt-get install libssh2–1-dev libssh2–1</code>.</p><br>
+
+      <p>Un archivo de configuración de ejemplo , que se acerca mucho al que necesitamos, está incluido por defecto. Aunque, necesitamos copiarlo a la localización del archivo de configuración por defecto para que WordPress reconozca al archivo. Lo haremos así: <code>cp wp-config-sample.php wp-config.php</code>.</p>
+      <img class="imagenestutorial" src="imagenes/Wordpress/6.png" alt="" />
+
+      <p>Ahora que tenemos un archivo de configuración con el que trabajar, lo abriremos con un editor de texto con el comando <code>nano wp-config-php</code>.</p>
+
+      <p>Ahora entraremos en el directorio donde hayamos instalado Wordpress, en nuestro caso escribiremos <code>cd ~/wordpress</code>.</p>
+
+      <p>Ahora entraremos en la IP de nuestro server.</p>
+      <img>
+
+      <p>Rellenamos los campos que nos pide:</p>
+      <img class="imagenestutorial" src="imagenes/Wordpress/7.png" alt="" />
+
+      <p>Ahora accedemos:</p>
+      <img class="imagenestutorial" src="imagenes/Wordpress/8.png" alt="" />
+
+      <p>Ahora nos logueamos con el usuario y contraseña que hayamos puesto.</p>
+      <img class="imagenestutorial" src="imagenes/Wordpress/9.png" alt="" />
+    </div>
+
+    <!-- COMO SE USA -->
+    <div  id="Uso" class="oculto">
+      <h2>¿CÓMO SE USA?</h2>
+
+      <p>Vamos a enseñaros a hacer algunas cosas basicas en wordpress. Para empezar a editar nuestro sitio pinchamos en personalizar tu sitio.</p>
+      <img class="imagenestutorial" src="imagenes/Wordpress/wp1.png" alt="" /><br>
+
+      <p>Para cambiar el tema ir a tema activo y hacer click en  cambiar.</p>
+      <img class="imagenestutorial" src="imagenes/Wordpress/wp2.png" alt="" /><br>
+
+      <p>Una vez hayamos elegido un tema le damo a guardar y activar.</p>
+      <img class="imagenestutorial" src="imagenes/Wordpress/wp3.png" alt="" /><br>
+
+      <p>Para añadir una nueva entrada a la izquierda pinchamos en entradas y nueva entrada nos saldra algo como esto.</p>
+      <img class="imagenestutorial" src="imagenes/Wordpress/wp4.png" alt="" /><br>
+
+      <p>Una vez hayamos creado la entrada y guardarla la podremos visualizar en nuestro sitio.</p>
+      <img class="imagenestutorial" src="imagenes/Wordpress/wp5.png" alt="" /><br>
+
+      <p>Una cosa que es muy util a la hora de usar wordpress son los plugins que podemos instalar accediendo por el panel de la izquierda y haciendo click en añadir plugin, hay elegimos un plugin que nos parezca correcto para instalar.</p>
+      <img class="imagenestutorial" src="imagenes/Wordpress/wp6.png" alt="" /><br>
+
+      <p>Una vez instalado lo podemos configurar.</p>
+      <img class="imagenestutorial" src="imagenes/Wordpress/wp7.png" alt="" /><br>
+
+      <p>El plugin que yo instale para añadirlo a la pagina lo puedo hacer desde apariencia, solo tendriamos que cojerlo y arrastrarlo al side bar.</p>
+      <img class="imagenestutorial" src="imagenes/Wordpress/wp8.png" alt="" /><br>
+
+      <p>Aqui podemos ver como se a puesto el plugin en nuestra pagina.</p>
+      <img class="imagenestutorial" src="imagenes/Wordpress/wp1.png" alt="" /><br>
+      </div>
+
+    <!-- PROBLEMAS -->
+    <div  id="Problemas" class="oculto">
+      <h2>PROBLEMAS</h2>
+      <p>El único problema que tuvimos nosotros fue que no nos dejaba instalar ningún tipo de componente adicional al WordPress, por lo que tuvimos que insertar en el <b><i>wp-config.php</i></b> la siguiente linea de código: <code>define('FS_METHOD', 'direct');</code>
+    </div>
+
+
+
+  </div>
+  
+
+  <script>
+    function ocultarQueEs(){
+      var y = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var x = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+      var w = document.getElementById("Uso");
+
+      if (x.className==="oculto"){
+        x.className="visible";
+        z.className="oculto";
+        t.className="oculto";
+        y.className="oculto";
+        u.className="oculto";
+        w.className="oculto";
+      }
+      else {
+        x.className="oculto";
+        z.className="visible";
+      }
+    }
+
+    function ocultarUso(){
+      var y = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var x = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+      var w = document.getElementById("Uso");
+
+      if (w.className==="oculto"){
+        x.className="oculto";
+        z.className="oculto";
+        t.className="oculto";
+        y.className="oculto";
+        u.className="oculto";
+        w.className="visible";
+
+      }
+      else {
+        w.className="oculto";
+        z.className="visible";
+      }
+    }
+
+    function ocultarParaQueSirve(){
+      var y = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var x = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+      var w = document.getElementById("Uso");
+
+      if (t.className==="oculto"){
+        x.className="oculto";
+        z.className="oculto";
+        t.className="visible";
+        y.className="oculto";
+        u.className="oculto";
+        w.className="oculto";
+      }
+      else {
+        t.className="oculto";
+        z.className="visible";
+      }
+    }
+
+    function ocultarInstalacion(){
+      var y = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var x = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+      var w = document.getElementById("Uso");
+
+      if (y.className==="oculto"){
+        x.className="oculto";
+        z.className="oculto";
+        t.className="oculto";
+        y.className="visible";
+        u.className="oculto";
+        w.className="oculto";
+      }
+      else {
+        y.className="oculto";
+        z.className="visible";
+      }
+    }
+
+    function ocultarProblemas(){
+      var y = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var x = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+      var w = document.getElementById("Uso");
+
+      if (u.className==="oculto"){
+        x.className="oculto";
+        z.className="oculto";
+        t.className="oculto";
+        y.className="oculto";
+        u.className="visible";
+        w.className="oculto";
+      }
+      else {
+        u.className="oculto";
+        z.className="visible";
+      }
+    }
+
+    function EnseñarTodo(){
+      var x = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var y = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+      var w = document.getElementById("Uso");
+      if (u.className==="oculto"){
+      x.className="visible";
+      z.className="visible";
+      t.className="visible";
+      y.className="visible";
+      u.className="visible";
+      w.className="visible";
+      }
+      else{
+        x.className="oculto";
+        z.className="visible";
+        t.className="oculto";
+        y.className="oculto";
+        u.className="oculto";
+        w.className="oculto";
+      }
+    } 
+  </script>
+  <!-- ACABA EL CUERPO -->
+
+</div>
+   <div class="footer" id="footer">
+            <div class="row">
+                <div class="bloquefooter">
+                    <h3>PHP-MySQL</h3>
+                    <a href="mysql.html"><img class="logofooter" src="imagenes/logomysql.svg"></a>
+                </div>
+                <div class="bloquefooter">
+                    <h3>WordPress</h3>
+                    <a href="wordpress.html"><img class="logofooter" src="imagenes/logowordpress.png"></a>
+                </div>
+                <div class="bloquefooter">
+                    <h3>OwnCloud</h3>
+                    <a href="owncloud.html"><img class="logofooter" src="imagenes/logoowncloud.png"></a>
+                </div>
+                <div class="bloquefooter">
+                    <h3>PrestaShop</h3>
+                    <a href="prestashop.html"><img class="logofooter" src="imagenes/logoprestashop.svg
+                    "></a>
+                </div>
+                
+            </div>
+            <!--/.row--> 
+        </div>
+        <!--/.container--> 
+    </div>
+    <!--/.footer-->
+
+<footer>  
+    <p>© 2017<a style="color:#0a93a6; text-decoration:none;" href="index.html"> G2</a>, todos los derechos reservados hasta que acabemos el curso 2017-2018.</p>
+    
+</footer>
+</body>
+</html>

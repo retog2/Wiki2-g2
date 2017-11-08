@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/css.css">
+  </head>
+<body>
+<a href="#arriba"><img class="casaarriba" src="imagenes/casa.png" alt=""></a>
+<p><a name="arriba"></a></p>
+  <div class="page-container">
+    <!-- EMPIEZA EL MENU -->
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="mysql.html">PHP-MySQL</a></li>
+          <li><a href="wordpress.html">WordPress</a></li>
+          <li><a href="owncloud.html">OwnCloud</a></li>
+          <li><a class="brand" href="prestashop.html">PrestaShop</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  <!-- ACABA EL MENU -->
+  
+  <!-- //////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- EMPIEZA EL CUERPO -->
+  <div class="cuerpo">
+    <!-- BOTONES PARA MOSTRAR EL CONTENIDO DEL TEMA -->
+    <center>
+      <div>
+        <button style="background-color:#a931f9" onclick="ocultarQueEs()" class="btn"><a>¿Qué es?</a></button>
+        <button style="background-color:#a931f9" onclick="ocultarParaQueSirve()" class="btn">¿Para qué sirve?</button>
+        <button style="background-color:#a931f9" onclick="ocultarInstalacion()" class="btn">Instalación</button><button style="background-color:#a931f9" onclick="ocultarProblemas()" class="btn">Problemas que hemos tenido</button>
+             <button style="background-color:#a931f9" onclick="ocultarUso()" class="btn">¿Cómo se usa?</button>
+        <button style="background-color:#a931f9" onclick="EnseñarTodo()" class="btn">Mostrar tutorial completo</button>
+      </div>
+  </center>
+    <img id="logo"  class="logo" src="imagenes/PrestaShop/logo.png">
+
+
+    <!-- ¿QUÉ ES? -->
+    <div  id="QueEs" class="oculto">
+    <h2>¿QUÉ ES?</h2>
+    <p>Es un sistema gestor de contenidos (CMS) libre y de código abierto.</p>
+    <p>PrestaShop está disponible bajo la licencia Open Software. El software está escrito en PHP y basado en el motor de plantillas Smarty. MySQL es el motor de base de datos predeterminado.</p>
+    </div>
+    
+    
+    <div id="ParaQueSirve" class="oculto">
+    <!-- ¿PARA QUÉ SIRVE? -->
+    <h2>¿PARA QUÉ SIRVE?</h2>
+      <p>Su principal función es la creación de tiendas online de comercio electrónico.</p>
+    </div>
+    
+    <!-- INSTALACIÓN -->
+    <div  id="Instalación" class="oculto">
+      <h2>INSTALACIÓN</h2>
+      <p>Para que la instalación y el PrestaShop funcione, tenemos que tener actualizados los repositorios con los siguientes comandos y tener instalado el apache y el mysql en el equipo.</p>
+      <p>Los comandos para actualizar los repositorios, son los siguientes:</p>
+        <code>apt-get update</code>
+        <code>apt-get upgrade</code>
+
+      <p>El apache lo deberíamos de tener instalado de la primera parte de la wiki.</p>
+      <p>A continuación instalaremos PHP5 y paquetes extras con los siguientes comandos:</p>
+
+      <code>apt-get install php libapache2-mod-php php-cli php-mysql php-mcrypt php-zip php-ldap php-curl php-gd php-odbc php-pear php-xml php-xmlrpc php-mbstring php-snmp php-soap php-intl curl</code><br> 
+       <img class="imagenestutorial" src="imagenes/PrestaShop/install_php.png" alt=""><br> 
+
+      <p>Una vez terminado el proceso de instalación de todos los paquetes de PHP5, reiniciamos el servicio del apache con el siguiente comando: <code>sudo service apache2 restart</code></p>
+
+      <p>Entraremos en modo MySQL mediante el comando <code>mysql -u root -p</code></p>
+
+
+      <p>Ahora introduciremos el comando <code>CREATE DATABASE PrestaShop</code>. Después comprobaremos que se haya creado correctamente con el comando <code>SHOW DATABASES</code>.</p>
+      <img class="imagenestutorial" src="imagenes/PrestaShop/creacion_BBDD_.png" alt=""><br>
+
+      <p>Ahora crearemos un usuario para la base de datos con el comando <code>CREATE USER adminPrestaShop@localhost IDENTIFIED BY ‘admin’</code>.</p>
+      <img class="imagenestutorial" src="imagenes/PrestaShop/cre_usua.png" alt=""><br>
+
+      <p>Daremos privilegios al usuario recien creado con los siguientes comandos y después mostraremos si los privilegios se han aplicado.</p>
+        <code>grant all privileges on prestashop * to usrprestashop;</code><br>
+        <code>flush privileges; </code><br>
+        <code>exit</code><br>
+      <img class="imagenestutorial" src="imagenes/PrestaShop/privile_ad.png" alt=""><br>
+
+
+      <p>Lo siguiente que tenemos que hacer es descargarnos la última versión de PrestaShop en el directorio “/tmp”. Para ello, ejecutamos el siguiente comando:<code> cd /tmp && wget https://download.prestashop.com/download/releases/prestashop_1.7.2.4.zip </code>.</p>
+      <img class="imagenestutorial" src="imagenes/PrestaShop/descar_paq_pres.png" alt=""><br>
+
+
+      <p>Tenemos que instalar el paquete unzip para descomprimir el archivo descargado, para ello con el siguiente comando lo instalaremos:
+      <code>sudo apt-te install unzip -y</code></p>
+      <img class="imagenestutorial" src="imagenes/PrestaShop/install_unzip.png" alt=""><br>
+
+      <p>Para extraer el contenido del paquete descargado “prestashop_1.7.2.4.zip” en la carpeta “/var/www/html/prestashop” tenemos que crear una carpeta llamada “prestashop” en la carpeta html y después ejecutar el siguiente comando:</p>
+      <b>creacion carpeta prestashop</b><br>
+      <code>mkdir prestashop</code><br>
+
+      <b>descromprimir carpeta</b><br>
+      <code>sudo unzip prestashop_1.7.1.4.zip -d /var/www/html/prestashop</code><br>
+      <img class="imagenestutorial" src="imagenes/PrestaShop/descrompr_pres.png" alt=""><br>
+
+      <p>Tenemos que aplicarle permisos al directorio de PrestaShop, para ello ejecutamos lo siguiente:</p>
+      <code>sudo chown -R www-data:www-data /var/www/html/prestashop/</code><br>
+      <img class="imagenestutorial" src="imagenes/PrestaShop/permi_pres.png" alt=""><br>
+
+      <p>Una vez hechos correctamente los pasos anteriores, para comprobar que todo funciona y poder seguir con la instalación, escribiremos en el navegador la siguiente dirección:</p>
+      <b>http://10.9.53.105/prestashop/</b>
+        <img class="imagenestutorial" src="imagenes/PrestaShop/empezar_insta.png" alt=""><br>
+
+      <p><b>Empezamos con la instalación y configuración del prestashop</b></p>
+      <p>Lo primero que tenemos que hacer es seleccionar el idioma, que en nuestro caso será en español y le damos a “siguiente”.</p>
+      <img class="imagenestutorial" src="imagenes/PrestaShop/install1_.png" alt=""><br>
+      
+      <p>En la siguiente, aceptamos los términos y condiciones clicando el cuadradito pequeño y dándole a siguiente.</p>
+      <img class="imagenestutorial" src="imagenes/PrestaShop/install2_.png" alt=""><br>
+
+    <p>Después del paso anterior nos ha surgido un pequeño problema y para solucionarlo, hemos tenido que seguir los siguientes pasos, que en el siguiente link os explicamos.</p>
+      <a href="#Problema">Problema</a>
+     
+
+      <p>Una vez editado el archivo anterior, reiniciamos el apache y podemos seguir con la instalación del PrestaShop.</p>
+
+      <p>En el <a name="siguiente">siguiente paso</a>, empezamos a configurar el prestashop para empezar a trabajar con ello. Rellenamos los datos que nos solicita y le damos a siguiente.</p>
+        <img class="imagenestutorial" src="imagenes/PrestaShop/install3_.png" alt=""><br>
+
+      <p>Una vez editado el archivo anterior, reiniciamos el apache con el comando <code>service apache2 restart</code> y podemos seguir con la instalación del PrestaShop.</p>
+        
+      <p>En el siguiente paso, rellenamos los datos que nos solicita y le damos a siguiente.</p>
+        <img class="imagenestutorial" src="imagenes/PrestaShop/install4_.png" alt=""><br>
+
+      <p>En el siguiente paso, configuramos la dirección del servidor, usuario de la base de datos y la base de datos y después le damos a siguiente.</p>
+        <img class="imagenestutorial" src="imagenes/PrestaShop/install6_.png" alt=""><br>
+
+
+      <p>A partir de ese punto, se empezará a instalar y configurar solo después de los pasos que hemos seguido y se acabará la instalación.</p>
+        <img class="imagenestutorial" src="imagenes/PrestaShop/install_7.png" alt=""><br>
+        <img class="imagenestutorial" src="imagenes/PrestaShop/install_fin.png" alt=""><br>
+
+      <p>Para poder ver la pagina de Prestashop, tenemos que poner en el navegador</p>
+        <code>http://10.9.53.105/prestashop/</code>
+
+      <p>Para poder entrar como administradores a la página del PrestaShop tenemos que poner la siguiente dirección y meter nuestro correo y contraseña.</p>
+        <code>http://10.9.53.105/prestashop/admin215kp1oef</code>
+        <img class="imagenestutorial" src="imagenes/PrestaShop/admin.png" alt=""><br>
+      
+      <p>Cuando acabe la instalación antes de entrar a la tienda o administrador, nos pide que borremos la carpeta "install", lo haremos con el siguiente comando:</p>
+      <code>rm install* -rf</code>
+
+    </div>
+    <!-- COMO SE USA -->
+    <div  id="Uso" class="oculto">
+      <h2>¿CÓMO SE USA?</h2>
+
+      <p>Vamos a enseñaros a hacer algunas cosas basicas en PrestaShop.</p>
+      <p>Para empezar a trabajar con ello, tendremos que poner el navegador el siguiente enlace, introducir nuestro email y clave. <code>http://10.9.53.105/prestashop/admin215kp1oef/</code><br>
+      <img class="imagenestutorial" src="imagenes/PrestaShop/princi.png" alt="" /><br>
+
+      <!-- Introducir productos -->
+      <p>Cuando pinchamos en "Productos" lo primero que vemos es lo siguiente:</p>
+      <img class="imagenestutorial" src="imagenes/PrestaShop/produc.png" alt="" /><br>
+
+      <p>Para poder añadir productos tendremos que pulsar sobre el icono de arriba a la derecha llamado "Nuevo" y después ponerle nombre, foto, una pequeña descripción, un precio, una cantidad de Stock, añadirle a su categoria correspondiente y darle a guardar. </p>
+      <img class="imagenestutorial" src="imagenes/PrestaShop/produc_descrip.png" alt="" /><br>
+       <img class="imagenestutorial" src="imagenes/PrestaShop/produc_anad.png" alt="" /><br>
+
+
+      <!-- Crear categorias y así poder ordenar los productos. -->
+      <p>Para añadir una nueva categoria, tenemos que pinchar en el menú de la izquierda sobre "catalogo" y dentro de ese desplegable, sobre "categoria", nos aparecerá la siguiente imagen: </p>
+      <img class="imagenestutorial" src="imagenes/PrestaShop/cate_.png" alt="" /><br>
+
+      <p>Una vez hemos pinchado en "categoria" nos aparecera la lista de categorias que tenemos, y una vez ahí, arriba a la derecha le daremos sobre el botón "añadir nueva categoria" como muestra en la siguiente imagen:</p>
+      <img class="imagenestutorial" src="imagenes/PrestaShop/anadir_cat.png" alt="" /><br>
+
+      <p>Ya estamos en el siguiente paso, después tendremos que ponerle un nombre, decirle si tiene una categoria padre, una descripción, etc. </p>
+       <img class="imagenestutorial" src="imagenes/PrestaShop/anadir-cat2.png" alt="" /><br>
+      <p>Una vez que tenemos todos los campos rellenados, le damos al botón de abajo a la derecha que pone "guardar".</p>
+      <img class="imagenestutorial" src="imagenes/PrestaShop/anadir-cat3.png" alt="" /><br>
+
+       <p>Una vez realizados los pasos anteriores, vamos a nuestra página web y podremos ver que los productos añadidos.</p>
+      <img class="imagenestutorial" src="imagenes/PrestaShop/productos.png" alt="" /><br>
+
+
+      
+      </div>
+
+     <!-- PROBLEMAS -->
+    <div id="Problemas" class="oculto">
+      <h2>PROBLEMAS</h2>
+      <p>Nos ha surgido un error que hemos subsanado de la siguiente forma: </p>
+      
+      <p>Tenemos que habilitar el “módulo de Apache mod_rewrite”, que para habilitarlo, tenemos que seguir los siguientes pasos:</p>
+        <code>sudo a2enmod rewrite</code><br>
+          <img class="imagenestutorial" src="imagenes/PrestaShop/habilitar_rwrite.png" alt=""><br>
+          
+        <code>sudo /etc/init.d/apache2 restart</code>
+
+      <p>A continuación editamos el archivo /etc/apache2/sites-enabled/000-default y buscamos la línea AllowOverride None y la cambiamos por AllowOverride All</p>
+<code>sudo nano /etc/apache2/sites-enabled/000-default</code><br>
+<p>En nuestro caso, hemos tenido que añadir las siguientes líneas, ya que en nuestro archivo no estaban escritas.</p>
+      <code> #Include conf-available/serve-cgi-bin.conf</code><br>
+        <code>Alias /log/ "/var/log/"</code><br>
+    <code><Directory "/var/log/"></code><br>
+         <code>Options Indexes MultiViews FollowSymLinks</code><br>
+         <code>AllowOverride All</code><br>
+         <code>Order deny,allow</code><br>
+         <code>Deny from all</code><br>
+         <code>Allow from all</code><br>
+        <code>Require all granted</code><br>
+    <code></Directory></code><br>
+              <img class="imagenestutorial" src="imagenes/PrestaShop/000-default.png" alt=""><br>
+
+  <p>Después de este último paso, reiniciamos el servicio apache con el siguiente comando y seguimos con los <a href="#siguiente">siguientes</a> pasos para terminar la instalación.</p>
+  <code>sudo /etc/init.d/apache2 restart</code>
+    </div>
+
+
+
+  </div>
+  </div>
+  
+
+  <script>
+    function ocultarQueEs(){
+      var y = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var x = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+      var w = document.getElementById("Uso");
+
+      if (x.className==="oculto"){
+        x.className="visible";
+        z.className="oculto";
+        t.className="oculto";
+        y.className="oculto";
+        u.className="oculto";
+        w.className="oculto";
+      }
+      else {
+        x.className="oculto";
+        z.className="visible";
+      }
+    }
+
+    function ocultarUso(){
+      var y = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var x = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+      var w = document.getElementById("Uso");
+
+      if (w.className==="oculto"){
+        x.className="oculto";
+        z.className="oculto";
+        t.className="oculto";
+        y.className="oculto";
+        u.className="oculto";
+        w.className="visible";
+
+      }
+      else {
+        w.className="oculto";
+        z.className="visible";
+      }
+    }
+
+    function ocultarParaQueSirve(){
+      var y = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var x = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+      var w = document.getElementById("Uso");
+
+      if (t.className==="oculto"){
+        x.className="oculto";
+        z.className="oculto";
+        t.className="visible";
+        y.className="oculto";
+        u.className="oculto";
+        w.className="oculto";
+      }
+      else {
+        t.className="oculto";
+        z.className="visible";
+      }
+    }
+
+    function ocultarInstalacion(){
+      var y = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var x = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+      var w = document.getElementById("Uso");
+
+      if (y.className==="oculto"){
+        x.className="oculto";
+        z.className="oculto";
+        t.className="oculto";
+        y.className="visible";
+        u.className="oculto";
+        w.className="oculto";
+      }
+      else {
+        y.className="oculto";
+        z.className="visible";
+      }
+    }
+
+    function ocultarProblemas(){
+      var y = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var x = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+      var w = document.getElementById("Uso");
+
+      if (u.className==="oculto"){
+        x.className="oculto";
+        z.className="oculto";
+        t.className="oculto";
+        y.className="oculto";
+        u.className="visible";
+        w.className="oculto";
+      }
+      else {
+        u.className="oculto";
+        z.className="visible";
+      }
+    }
+
+    function EnseñarTodo(){
+      var x = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var y = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+      var w = document.getElementById("Uso");
+      if (u.className==="oculto"){
+      x.className="visible";
+      z.className="visible";
+      t.className="visible";
+      y.className="visible";
+      u.className="visible";
+      w.className="visible";
+      }
+      else{
+        x.className="oculto";
+        z.className="visible";
+        t.className="oculto";
+        y.className="oculto";
+        u.className="oculto";
+        w.className="oculto";
+      }
+    } 
+  </script>
+  <!-- ACABA EL CUERPO -->
+
+
+    <div class="footer" id="footer">
+            <div class="row">
+                <div class="bloquefooter">
+                    <h3>PHP-MySQL</h3>
+                    <a href="mysql.html"><img class="logofooter" src="imagenes/logomysql.svg"></a>
+                </div>
+                <div class="bloquefooter">
+                    <h3>WordPress</h3>
+                    <a href="wordpress.html"><img class="logofooter" src="imagenes/logowordpress.png"></a>
+                </div>
+                <div class="bloquefooter">
+                    <h3>OwnCloud</h3>
+                    <a href="owncloud.html"><img class="logofooter" src="imagenes/logoowncloud.png"></a>
+                </div>
+                <div class="bloquefooter">
+                    <h3>PrestaShop</h3>
+                    <a href="prestashop.html"><img class="logofooter" src="imagenes/logoprestashop.svg
+                    "></a>
+                </div>
+                
+            </div>
+            <!--/.row--> 
+        </div>
+        <!--/.container--> 
+    </div>
+    <!--/.footer-->
+
+<footer>  
+    <p>© 2017<a style="color:#0a93a6; text-decoration:none;" href="index.html"> G2</a>, todos los derechos reservados hasta que acabemos el curso 2017-2018.</p>
+    
+</footer>
+</body>
+</html>

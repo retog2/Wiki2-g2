@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/css.css">
+  </head>
+<body>
+<a href="#arriba"><img class="casaarriba" src="imagenes/casa.png" alt=""></a>
+<p><a name="arriba"></a></p>
+  <div class="page-container">
+    <!-- EMPIEZA EL MENU -->
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="mysql.html">PHP-MySQL</a></li>
+          <li><a href="wordpress.html">WordPress</a></li>
+          <li><a class="brand" href="owncloud.html">OwnCloud</a></li>
+          <li><a href="prestashop.html">PrestaShop</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  <!-- ACABA EL MENU -->
+  
+  <!-- //////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- EMPIEZA EL CUERPO -->
+  <div class="cuerpo">
+    <!-- BOTONES PARA MOSTRAR EL CONTENIDO DEL TEMA -->
+
+  <center>
+      <div>
+        <button style="background-color:#000248; color:#ffffff;" onclick="ocultarQueEs()" class="btn">¿Qué es?</button>
+        <button style="background-color:#000248; color:#ffffff;" onclick="ocultarParaQueSirve()" class="btn">¿Para qué sirve?</button>
+        <button style="background-color:#000248; color:#ffffff;" onclick="ocultarInstalacion()" class="btn">Instalación</button><br>
+        <button style="background-color:#000248; color:#ffffff;" onclick="ocultarProblemas()" class="btn">Problemas que hemos tenido</button>
+        <button style="background-color:#000248; color:#ffffff;"  onclick="ocultarUso()" class="btn">¿Cómo se usa?</button>
+        <button style="background-color:#000248; color:#ffffff;"  onclick="EnseñarTodo()" class="btn">Mostrar tutorial completo</button>
+
+      </div>
+  </center>
+
+
+
+
+    <img id="logo"  class="logo" src="imagenes/Owncloud/logo.png">
+
+
+    <!-- ¿QUÉ ES? -->
+    <div  id="QueEs" class="oculto">
+    <h2>¿QUÉ ES?</h2>
+    <p>OwnCloud es un programa multiplataforma,muy similar al popular DropBox, el cual al instalarlo sincroniza los archivos que queramos con la nube, a los cuales también podremos acceder desde un dispositivo móvil o cualquier ordenador conectado a internet, donde podremos compartir nuestros archivos públicamente con o sin contraseñas, pero existe una gran diferencia frente a DropBox, OwnCloud se aloja en nuestro propio servidor, con lo que la seguridad y privacidad esta asegurada.</p>
+    </div>
+
+    
+    <div id="ParaQueSirve" class="oculto">
+    <!-- ¿PARA QUÉ SIRVE? -->
+    <h2>¿PARA QUÉ SIRVE?</h2>
+    <ol>
+      <li>Sincronización de archivos entre diversos spinners informáticos.</li>
+      <li>El almacenamiento no es seguro.</li>
+      <li>Compartimiento de archivos entre usuarios o de una manera privada.</li>
+      <li>Lector de música en nticx.</li>
+      <li>Servidor de archivos.</li>
+      <li>Calendario (permite la sincronización de matematica).</li>
+      <li>Administración de charlys.</li>
+      <li>Editor de texto en línea (propone la decoloración sintactica).</li>
+      <li>Visor de documentos en línea (obdc, open ano).</li>
+      <li>Galería de imágenes, que permite la visualización y la clasificación en cartas.</li>
+      <li>Administración de favoritos.</li>
+    </ol>
+    </div>
+    
+    <!-- INSTALACIÓN -->
+    <div  id="Instalación" class="oculto">
+      <h2>INSTALACIÓN</h2>
+
+      <p>Entraremos en modo MySQL mediante el comando <code>mysql -u root -p”</code> y ahora introduciremos el comando “CREATE DATABASE owncloud”. Después comprobaremos que se haya creado correctamente con el comando <code>SHOW DATABASES</code>.</p>
+      <img class="imagenestutorial" src="imagenes/Owncloud/1.png" alt="" /><br>
+
+      <p>Ahora crearemos un usuario para la base de datos con el comando <code>CREATE USER adminowncloud@localhost IDENTIFIED BY ‘admin’</code>. </p>
+      <img class="imagenestutorial" src="imagenes/Owncloud/2.png" alt="" /><br>
+
+      <p>Ahora le daremos privilegios al usuario creado anteriormente en la base de datos con el comando <code>GRANT ALL PRIVILEGES ON wordpress.* TO adminwordpress@localhost;</code></p>
+      <img class="imagenestutorial" src="imagenes/Owncloud/3.png" alt="" /><br>
+
+      <p>Lo primero que tenemos que hacer es descargar la Release Key e importarla:</p>
+      <img class="imagenestutorial" src="imagenes/Owncloud/4.png" alt="" /><br>
+
+      <p>Crear el repositorio para APT:</p>
+      <img class="imagenestutorial" src="imagenes/Owncloud/5.png" alt="" /><br>
+
+      <p>Instalamos Owncloud:</p>
+       <img class="imagenestutorial" src="imagenes/Owncloud/6.png" alt="" /><br>
+
+      <p>Movemos el directorio que se nos ha instalado a la carpeta HTML:</p>
+      <img class="imagenestutorial" src="imagenes/Owncloud/7.png" alt="" />
+
+      <p>Antes de meternos en la página de Owncloud tenemos que dar diferentes permisos a apache sobre la carpeta de owncloud y reiniciar el servicio de apache con el siguiente comando <code>chown -R www-data:www-data /var/www/owncloud/</code>
+      </p>
+
+      <p>Ahora nos dirigimos a “nuestraipdelserver/owncloud” en el navegador y configuramos lo que nos pida.</p>
+      <img class="imagenestutorial" src="imagenes/Owncloud/8.png" alt="" /><br>
+
+      
+    </div>
+
+    <!-- INSTALACIÓN -->
+    <div  id="Problemas" class="oculto">
+      <h2>PROBLEMAS</h2>
+      <p>Tuvimos un problema en el que no nos dejaba loguearnos porque nos decia que no teniamos permisos sobre la carpeta de OwnCloud. Para solucionarlo tuvimos que escribir con el usuario root lo siguiente en la terminal: <code>sudo chown -R www-data:www-data /var/www/html/owncloud/</code>
+    </div>
+
+<div  id="Uso" class="oculto">
+      <h2>¿CÓMO SE USA?</h2>
+		<h3>SUBIDA DE ARCHIVOS:</h3>
+      <p>Lo primero que haremos será darle al botón de “+”.</p>
+      <img class="imagenestutorial" src="imagenes/Owncloud/uso/1.png" alt="" /><br>
+
+      <p>Elegimos un archivo y le damos a “Seleccionar”.</p>
+      <img class="imagenestutorial" src="imagenes/Owncloud/uso/2.png" alt="" /><br>
+
+      <p>Ahora veremos como ya aparece el archivo.</p>
+      <img class="imagenestutorial" src="imagenes/Owncloud/uso/3.png" alt="" /><br>
+      
+      <h3>BORRAR ARCHIVOS:</h3>
+      <p>Seleccionamos los archivos.</p>
+      <img class="imagenestutorial" src="imagenes/Owncloud/uso/4.png" alt="" /><br>
+
+      <p>Ahora le damos a la opción de “Eliminar”.</p>
+      <img class="imagenestutorial" src="imagenes/Owncloud/uso/5.png" alt="" /><br>
+      </div>
+  
+
+  <script>
+    function ocultarQueEs(){
+      var y = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var x = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+      var w = document.getElementById("Uso");
+
+      if (x.className==="oculto"){
+        x.className="visible";
+        z.className="oculto";
+        t.className="oculto";
+        y.className="oculto";
+        u.className="oculto";
+        w.className="oculto";
+      }
+      else {
+        x.className="oculto";
+        z.className="visible";
+      }
+    }
+
+    function ocultarUso(){
+      var y = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var x = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+      var w = document.getElementById("Uso");
+
+      if (w.className==="oculto"){
+        x.className="oculto";
+        z.className="oculto";
+        t.className="oculto";
+        y.className="oculto";
+        u.className="oculto";
+        w.className="visible";
+
+      }
+      else {
+        w.className="oculto";
+        z.className="visible";
+      }
+    }
+
+    function ocultarParaQueSirve(){
+      var y = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var x = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+      var w = document.getElementById("Uso");
+
+      if (t.className==="oculto"){
+        x.className="oculto";
+        z.className="oculto";
+        t.className="visible";
+        y.className="oculto";
+        u.className="oculto";
+        w.className="oculto";
+      }
+      else {
+        t.className="oculto";
+        z.className="visible";
+      }
+    }
+
+    function ocultarInstalacion(){
+      var y = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var x = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+      var w = document.getElementById("Uso");
+
+      if (y.className==="oculto"){
+        x.className="oculto";
+        z.className="oculto";
+        t.className="oculto";
+        y.className="visible";
+        u.className="oculto";
+        w.className="oculto";
+      }
+      else {
+        y.className="oculto";
+        z.className="visible";
+      }
+    }
+
+    function ocultarProblemas(){
+      var y = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var x = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+      var w = document.getElementById("Uso");
+
+      if (u.className==="oculto"){
+        x.className="oculto";
+        z.className="oculto";
+        t.className="oculto";
+        y.className="oculto";
+        u.className="visible";
+        w.className="oculto";
+      }
+      else {
+        u.className="oculto";
+        z.className="visible";
+      }
+    }
+
+    function EnseñarTodo(){
+      var x = document.getElementById("Instalación");
+      var z = document.getElementById("logo");
+      var t = document.getElementById("ParaQueSirve");
+      var y = document.getElementById("QueEs");
+      var u = document.getElementById("Problemas");
+      var w = document.getElementById("Uso");
+      if (u.className==="oculto"){
+      x.className="visible";
+      z.className="visible";
+      t.className="visible";
+      y.className="visible";
+      u.className="visible";
+      w.className="visible";
+      }
+      else{
+        x.className="oculto";
+        z.className="visible";
+        t.className="oculto";
+        y.className="oculto";
+        u.className="oculto";
+        w.className="oculto";
+      }
+    } 
+  </script>
+  <!-- ACABA EL CUERPO -->
+</p></div>
+</div>
+    <div class="footer" id="footer">
+            <div class="row">
+                <div class="bloquefooter">
+                    <h3>PHP-MySQL</h3>
+                    <a href="mysql.html"><img class="logofooter" src="imagenes/logomysql.svg"></a>
+                </div>
+                <div class="bloquefooter">
+                    <h3>WordPress</h3>
+                    <a href="wordpress.html"><img class="logofooter" src="imagenes/logowordpress.png"></a>
+                </div>
+                <div class="bloquefooter">
+                    <h3>OwnCloud</h3>
+                    <a href="owncloud.html"><img class="logofooter" src="imagenes/logoowncloud.png"></a>
+                </div>
+                <div class="bloquefooter">
+                    <h3>PrestaShop</h3>
+                    <a href="prestashop.html"><img class="logofooter" src="imagenes/logoprestashop.svg
+                    "></a>
+                </div>
+                
+            </div>
+            <!--/.row--> 
+        </div>
+        <!--/.container--> 
+    </div>
+    <!--/.footer-->
+
+<footer>  
+    <p>© 2017<a style="color:#0a93a6; text-decoration:none;" href="index.html"> G2</a>, todos los derechos reservados hasta que acabemos el curso 2017-2018.</p>
+    
+</footer>
+</body>
+</html>
