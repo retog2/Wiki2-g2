@@ -8,11 +8,7 @@ body {
 
 /* EMPIEZA MENU */
 
-<<<<<<< HEAD
 
-=======
-@media (min-width: 768px) {
->>>>>>> c0175908b04570b11df21f7c998496e81e76fa32
     .navbar-nav > li {
         float: none;
         display: inline-block;
@@ -26,10 +22,13 @@ body {
     .navbar-nav {
         float: none !important;
         text-align: center;
-        margin: 0 auto;
-        text-align: center;
+        margin-left: -25%;
     }
     
+   .collapse .navbar-collapse li{
+    width:120%;
+   }
+
     .navbar:after {
         margin:none;
         content: " ";
@@ -48,6 +47,14 @@ body {
         color: #ffffff !important;
     }
     
+.navbar-nav{
+    margin-top:-8%;
+}
+
+.navbar-nav > li  {
+      margin-top: 2%;
+    }
+
     .navbar-nav > li > a {
         font-style: italic;
         display: inline-block;
@@ -57,7 +64,9 @@ body {
         box-shadow: 8px 0 25px rgba(0, 0, 0, 0.3);
         color: #444;
         background: #d9d9d9;
-        padding: 15px 45px;
+        padding: 2.5px 12.5px;
+
+        font-size: 15px;
     }
     
     .navbar-nav > li > a:hover,
@@ -68,10 +77,6 @@ body {
         color: white;    
     }
     
-<<<<<<< HEAD
-=======
-}
->>>>>>> c0175908b04570b11df21f7c998496e81e76fa32
 
 .page-container {
     background: #eee;  
@@ -126,7 +131,7 @@ button:hover{
 
 #logo {
     width:100%;
-    height: 520px;
+    height: 50%;
     margin-top: 2%;
 }
 
@@ -148,42 +153,25 @@ button:hover{
 .full {
     width: 100%;    
 }
-
-.footer h3 {
-    border-bottom: 1px solid #BAC1C8;
-    color: #54697E;
-<<<<<<< HEAD
-    font-size: 100%;
-    font-weight: 600%;
-    line-height: 100%;
-=======
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 27px;
->>>>>>> c0175908b04570b11df21f7c998496e81e76fa32
-    padding: 40px 0 10px;
-    text-transform: uppercase;
-}
-
 .bloquefooter{
     display:inline-block;
-    width:20%;
+    width:18%;
     padding-left: 4%;
     padding-bottom:2%;
 }
-<<<<<<< HEAD
-.bloquefooter h3{
-    font-size: 1em;
+.bloquefooter h3 {
+    visibility: hidden;
+}
+.bloquefooter img{
+    width:100%;
+    display:inline-block;
 }
 
-.footer ul {
-    font-size: 15em;
-=======
+
 
 .footer ul {
     font-size: 13px;
->>>>>>> c0175908b04570b11df21f7c998496e81e76fa32
-    list-style-type: none;
+    list-style-type: inline;
     margin-left: 0;
     padding-left: 0;
     margin-top: 15px;
@@ -194,11 +182,7 @@ button:hover{
     display: block;
 }
 .footer a {
-<<<<<<< HEAD
-    color: #78828D;
-=======
     color: #78828D
->>>>>>> c0175908b04570b11df21f7c998496e81e76fa32
 }
 .supportLi h4 {
     font-size: 20px;
@@ -225,8 +209,8 @@ footer p {
 }
 
 .imagenslider {
-    width:450px;
-    height:450px;
+    width:100%;
+    height:100%;
 }
 
 
