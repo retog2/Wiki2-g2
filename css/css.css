@@ -8,11 +8,7 @@ body {
 
 /* EMPIEZA MENU */
 
-<<<<<<< HEAD
 
-=======
-@media (min-width: 768px) {
->>>>>>> c0175908b04570b11df21f7c998496e81e76fa32
     .navbar-nav > li {
         float: none;
         display: inline-block;
@@ -68,10 +64,8 @@ body {
         color: white;    
     }
     
-<<<<<<< HEAD
-=======
-}
->>>>>>> c0175908b04570b11df21f7c998496e81e76fa32
+
+
 
 .page-container {
     background: #eee;  
@@ -152,15 +146,12 @@ button:hover{
 .footer h3 {
     border-bottom: 1px solid #BAC1C8;
     color: #54697E;
-<<<<<<< HEAD
     font-size: 100%;
     font-weight: 600%;
     line-height: 100%;
-=======
     font-size: 18px;
     font-weight: 600;
     line-height: 27px;
->>>>>>> c0175908b04570b11df21f7c998496e81e76fa32
     padding: 40px 0 10px;
     text-transform: uppercase;
 }
@@ -171,18 +162,15 @@ button:hover{
     padding-left: 4%;
     padding-bottom:2%;
 }
-<<<<<<< HEAD
 .bloquefooter h3{
     font-size: 1em;
 }
 
 .footer ul {
     font-size: 15em;
-=======
-
+}
 .footer ul {
     font-size: 13px;
->>>>>>> c0175908b04570b11df21f7c998496e81e76fa32
     list-style-type: none;
     margin-left: 0;
     padding-left: 0;
@@ -194,11 +182,9 @@ button:hover{
     display: block;
 }
 .footer a {
-<<<<<<< HEAD
     color: #78828D;
-=======
+
     color: #78828D
->>>>>>> c0175908b04570b11df21f7c998496e81e76fa32
 }
 .supportLi h4 {
     font-size: 20px;
